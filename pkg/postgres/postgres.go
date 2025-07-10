@@ -11,6 +11,7 @@ import (
 	"github.com/jackc/pgx/v5/pgxpool"
 )
 
+// TODO: should not be here
 const (
 	_defaultMaxPoolSize  = 1
 	_defaultConnAttempts = 10

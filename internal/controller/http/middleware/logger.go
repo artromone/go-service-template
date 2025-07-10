@@ -1,13 +1,14 @@
 package middleware
 
 import (
+	"go-clean-template/pkg/logger"
 	"strconv"
 	"strings"
 
-	"github.com/evrone/go-clean-template/pkg/logger"
 	"github.com/gofiber/fiber/v2"
 )
 
+// TODO: public functions first
 func buildRequestMessage(ctx *fiber.Ctx) string {
 	var result strings.Builder
 

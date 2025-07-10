@@ -3,9 +3,8 @@ package persistent
 import (
 	"context"
 	"fmt"
-
-	"github.com/evrone/go-clean-template/internal/entity"
-	"github.com/evrone/go-clean-template/pkg/postgres"
+	"go-clean-template/internal/entity"
+	"go-clean-template/pkg/postgres"
 )
 
 const _defaultEntityCap = 64
@@ -51,6 +50,8 @@ func (r *TranslationRepo) GetHistory(ctx context.Context) ([]entity.Translation,
 
 	return entities, nil
 }
+
+// TODO: transactions
 
 // Store -.
 func (r *TranslationRepo) Store(ctx context.Context, t entity.Translation) error {

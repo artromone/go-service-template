@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"context"
 	"fmt"
+	"go-clean-template/pkg/rabbitmq/rmq_rpc/client"
 	"io"
 	"log"
 	"net/http"
@@ -11,13 +12,14 @@ import (
 	"testing"
 	"time"
 
-	protov1 "github.com/evrone/go-clean-template/docs/proto/v1"
-	"github.com/evrone/go-clean-template/pkg/rabbitmq/rmq_rpc/client"
+	protov1 "go-clean-template/docs/proto/v1"
+
 	"github.com/goccy/go-json"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 )
 
+// TODO: remove duplication, need to be genereated
 const (
 	// Base settings
 	host     = "app"
@@ -46,6 +48,7 @@ const (
 
 var errHealthCheck = fmt.Errorf("url %s is not available", healthPath)
 
+// TODO: to be moved somewhare to reuse
 func doWebRequestWithTimeout(ctx context.Context, method, url string, body io.Reader) (*http.Response, error) {
 	req, err := http.NewRequestWithContext(ctx, method, url, body)
 	if err != nil {

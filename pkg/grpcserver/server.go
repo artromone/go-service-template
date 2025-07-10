@@ -8,6 +8,7 @@ import (
 	pbgrpc "google.golang.org/grpc"
 )
 
+// TODO: should not be here
 const (
 	_defaultAddr = ":80"
 )

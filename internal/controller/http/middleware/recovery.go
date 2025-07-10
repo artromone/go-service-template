@@ -2,10 +2,10 @@ package middleware
 
 import (
 	"fmt"
+	"go-clean-template/pkg/logger"
 	"runtime/debug"
 	"strings"
 
-	"github.com/evrone/go-clean-template/pkg/logger"
 	"github.com/gofiber/fiber/v2"
 	fiberRecover "github.com/gofiber/fiber/v2/middleware/recover"
 )

@@ -4,6 +4,7 @@ import (
 	"net"
 )
 
+// TODO: can be generated
 // Option -.
 type Option func(*Server)
 

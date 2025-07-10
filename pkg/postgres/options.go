@@ -2,6 +2,7 @@ package postgres
 
 import "time"
 
+// TODO: can be generated
 // Option -.
 type Option func(*Postgres)
 

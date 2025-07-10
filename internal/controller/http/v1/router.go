@@ -1,11 +1,14 @@
 package v1
 
 import (
-	"github.com/evrone/go-clean-template/internal/usecase"
-	"github.com/evrone/go-clean-template/pkg/logger"
+	"go-clean-template/internal/usecase"
+	"go-clean-template/pkg/logger"
+
 	"github.com/go-playground/validator/v10"
 	"github.com/gofiber/fiber/v2"
 )
+
+// TODO: can be generated
 
 // NewTranslationRoutes -.
 func NewTranslationRoutes(apiV1Group fiber.Router, t usecase.Translation, l logger.Interface) {
